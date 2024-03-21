@@ -7,11 +7,6 @@ import (
 	"NosoHive/internal/config"
 )
 
-const (
-	envDev  = "dev"
-	envProd = "prod"
-)
-
 func main() {
 	if err := run(); err != nil {
 		log.Fatal(err)

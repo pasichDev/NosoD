@@ -5,6 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"NosoHive/internal/paths"
+
 	"github.com/ilyakaznacheev/cleanenv"
 )
 
@@ -29,7 +31,7 @@ func MustLoad() *Config {
 		log.Fatalf("cannot determine executable path: %s", err)
 	}
 
-	configPath := filepath.Join(filepath.Dir(executablePath), "config.yaml")
+	configPath := filepath.Join(filepath.Dir(executablePath), paths.Config)
 
 	// check if file exists
 	if _, err := os.Stat(configPath); os.IsNotExist(err) {
