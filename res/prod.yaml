@@ -1,0 +1,8 @@
+env: "release"
+my_ip: "127.0.0.1"
+dns_seed: "127.0.0.1"
+rpc:
+  active: false
+  port: 8073
+  user: ""
+  password: ""
